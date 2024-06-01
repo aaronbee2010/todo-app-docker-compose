@@ -23,6 +23,6 @@ services:
     ports:
       - "5433:5432"
     volumes:
-      - ./database/init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
       - ./database/pgdata:/var/lib/postgresql/data
     restart: unless-stopped
