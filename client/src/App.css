@@ -1,0 +1,96 @@
+.jost-extralight-normal {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.jost-regular-normal {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.jost-semibold-normal {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.jost-extrabold-normal {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.h1-size {
+    font-size: 36px;
+}
+
+:root {
+    --blue-0: hsl(201, 50%, 20%);
+    --blue-1: hsl(200, 100%, 75%);
+    --blue-2: hsl(200, 100%, 85%);
+    --blue-3: hsl(200, 100%, 90%);
+    --blue-4: hsl(200, 100%, 95%);
+}
+
+
+body {
+    margin: 0;
+    background-color: var(--blue-1);
+}
+
+#root {
+    display: flex;
+    justify-content: space-around;
+}
+
+main {
+    background-color: var(--blue-2);
+    color: var(--blue-0);
+    border: 2px solid var(--blue-0);
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 128px;
+    padding: 24px 36px;
+}
+
+input, button {
+    border: 1px solid var(--blue-0);
+    background-color: var(--blue-4);
+    color: var(--blue-0);
+}
+
+input {
+    padding: 4px;
+}
+
+input:focus {
+    border: 2px solid var(--blue-0);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th,
+table td {
+    background-color: var(--blue-3);
+    border: 1px solid var(--blue-0);;
+    padding: 4px 8px;
+}
+
+#newTodoForm {
+    display: flex;
+}
+
+#newTodoMessage {
+    margin-right: 1em;
+    flex-grow: 1;
+}

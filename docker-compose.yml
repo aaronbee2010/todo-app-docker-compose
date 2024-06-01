@@ -1,0 +1,28 @@
+services:
+  client:
+    build: ./client
+    depends_on:
+      - server
+    ports:
+      - "8081:8080"
+    restart: unless-stopped
+  
+  server:
+    build: ./server
+    depends_on:
+      - database
+    ports:
+      - "3001:3000"
+    restart: unless-stopped
+
+  database:
+    image: postgres:alpine
+    environment:
+      - POSTGRES_PASSWORD=password123
+      - POSTGRES_USER=postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./database/init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh
+      - ./database/pgdata:/var/lib/postgresql/data
+    restart: unless-stopped
