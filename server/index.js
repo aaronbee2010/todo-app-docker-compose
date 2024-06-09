@@ -33,7 +33,7 @@ app.post('/api/v1/todos', async (req, res) => {
             [ req.body.message ]
         );
         if (query.rowCount > 0) {
-            res.json({success: true, message: "Added new todo"});
+            res.status(201).json({success: true, message: "Added new todo"});
         } else {
             res.status(500).json({success: false, message: "Failed to add todo"});
         }
